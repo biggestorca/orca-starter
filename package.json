@@ -10,7 +10,7 @@
     "fix": "yarn eslint:--fix && yarn stylelint:--fix",
     "start": "webpack-dev-server --config webpack.dev.js",
     "stylelint:--fix": "stylelint ./**/*.css !./public/**/*.css --fix",
-    "deploy": "webpack --config webpack.prod.js && firebase deploy"
+    "deploy": "rm -rf public && mkdir public && webpack --config webpack.prod.js && firebase deploy"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
